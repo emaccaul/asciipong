@@ -1,6 +1,9 @@
 CFLAGS = -Wall
 RM = rm -f
 
+# Note: to build for Windows, uncomment the following line
+# LDFLAGS = -lwinmm
+
 OBJS =	\
 	pong.o \
 	timer.o \
@@ -10,8 +13,7 @@ OBJS =	\
 # end of OBJS
 
 pong.exe: $(OBJS)
-	gcc $(OBJS) -o pong.exe
-#	gcc $(OBJS) -lwinmm -o pong.exe
+	gcc $(OBJS) $(LDFLAGS) -o pong.exe
 
 pong.o: pong.c timer.h command_options.h titlescreen.h
 	gcc $(CFLAGS) -c pong.c

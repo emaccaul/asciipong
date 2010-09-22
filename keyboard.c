@@ -58,7 +58,16 @@ static void set_input_mode(void)
 
 int kbhit(void)
 {
-  return 1;
+  struct timeval tv;
+  fd_set fds;
+  tv.tv_sec = 0;
+  tv.tv_usec = 0;
+  FD_ZERO(&fds);
+  FD_SET(STDIN_FILENO, &fds);
+  if (select(STDIN_FILENO+1, &fds, NULL, NULL, &tv) == -1) {
+    return 0;
+  }
+  return FD_ISSET(STDIN_FILENO, &fds);
 }
 
 int getch(void)
@@ -79,7 +88,9 @@ int getch(void)
 
 int getche(void)
 {
-  return getch();
+  int c = getch();
+  putc(c, stderr);
+  return c;
 }
 
 #endif

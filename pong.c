@@ -312,7 +312,7 @@ int main(int ac, char ** av)
       takePlayerInput(&you, &pc);
 
     movePong(&pongBall, &pc, &you);
-    delay(11);  /* this delay should be variable */
+    delay(66);  /* TODO: this delay should be variable */
   }
 
   free(opt);

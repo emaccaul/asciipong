@@ -36,6 +36,7 @@ static void getInputToEOL(char *buffer, int size)
   while ((c=getchar()) != '\n' && c != EOF) {
     if (i < size && c != '\n') {
       buffer[i] = c;
+      putchar(c);
       i++;
     }
   }
@@ -65,8 +66,8 @@ static void setPlayerName(char *playername)
   clear_screen();
   printf("Enter your new name, %s: ", playername);
   getInputToEOL(playername, PLAYER_NAME_LEN);
-  printf("Welcome to ascii pong, %s\n", playername);
-  delay(1000);
+  printf("\nWelcome to ascii pong, %s\n", playername);
+  delay(2000);
 }
 
 static void addP1(Options *opt)
