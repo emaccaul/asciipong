@@ -3,7 +3,8 @@ ASCII Pong
 A simple game of pong that uses `printf` for "drawing".
 
 To run the game:
-    `$ pong.exe [roundlimit]`
+
+`$ pong.exe [roundlimit]`
 
 Round limit is an optional parameter that defaults to three(3). The game is 
 played as best of `roundlimit` games. Hence, the default setting is to play
@@ -13,8 +14,7 @@ If you desperately want to exit the game before all the rounds are up, just
 press CTRL-C at any time. This will quit the game, but you won't get to see the
 end stats. I may fix this later if I feel like it.
 
-Controls
---------
+### Controls
 
 Player 1:
 
