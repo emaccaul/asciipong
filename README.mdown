@@ -1,19 +1,25 @@
-To start the game, you can just double click on it and it will run with default settings.
-The default setting is to play a game of best 2 out of 3 rounds against the machine, a default
-delay time is also set.
+ASCII Pong
+==========
+A simple game of pong that uses `printf` for "drawing".
 
-if you want to change the default settings, run the program from the command line like so:
-  pong.exe [roundlimit]
-round limit is an optional parameter that defaults to three(3).
+---
 
-The game is scored as best n out of m rounds. m is the supplied round limit, and the number (n) needed
-to win the match is calculated.
+To run the game:
+  $ pong.exe [roundlimit]
 
-If you desperately want to exit the game before all the rounds are up, just press CTRL-C at any time.
-This will just quit the game and you won't get to see the end stats. I may fix this later if I feel
-like it. If you use this option to kill the program, the screen will still be set to green on black,
-if you started running from the command line. To fix, just type end the command: color.
+Round limit is an optional parameter that defaults to three(3). The game is 
+played as best of `roundlimit` games. Hence, the default setting is to play
+best 2 out of 3 rounds against the CPU.
 
-The guy at the top of the screen is labled CPU and the guy at the bottom is called Player 1.
+If you desperately want to exit the game before all the rounds are up, just 
+press CTRL-C at any time. This will quit the game, but you won't get to see the
+end stats. I may fix this later if I feel like it.
 
-Have fun.
+Have fun!
+
+Compiling
+---------
+
+Take a look at the Makefile first and change any options you want (e.g. 
+compiling for Windows). Then all you need to do is type `make` one the command
+line.
