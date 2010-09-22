@@ -2,8 +2,6 @@ ASCII Pong
 ==========
 A simple game of pong that uses `printf` for "drawing".
 
----
-
 To run the game:
   $ pong.exe [roundlimit]
 
@@ -19,22 +17,20 @@ Controls
 --------
 
 Player 1:
+
 - '.' moves left
 - '/' moves right
 
 Player 2:
+
 - 'z' moves left
 - 'x' moves right
 
-Have fun!
+---
 
-Compiling
----------
-
-Take a look at the Makefile first and change any options you want (e.g. 
-compiling for Windows). Then all you need to do is type `make` one the command
-line.
-
+Take a look at the Makefile if you would like to compile for Windows.
 
 Please note that this code was written several moons ago, and hence is not 
-indicative of how I write this program if I restarted it today.
+indicative of how I would write this program if I were to start today.
+
+Have fun!
