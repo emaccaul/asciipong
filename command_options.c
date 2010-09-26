@@ -42,6 +42,7 @@ static void getInputToEOL(char *buffer, int size)
   }
 
   buffer[i] = 0;
+  putchar('\n');
 }
 
 static int getOption(int withClearScreen)
@@ -66,7 +67,7 @@ static void setPlayerName(char *playername)
   clear_screen();
   printf("Enter your new name, %s: ", playername);
   getInputToEOL(playername, PLAYER_NAME_LEN);
-  printf("\nWelcome to ascii pong, %s\n", playername);
+  printf("Welcome to ascii pong, %s\n", playername);
   delay(2000);
 }
 
